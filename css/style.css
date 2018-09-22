@@ -1,0 +1,131 @@
+.tree_root {
+  text-align: center;
+}
+.my_tree {
+  display: inline-block !important;
+  text-align:center;
+}
+ul {
+  display: table;
+  margin-top: 40px;
+  padding-left: 0;
+  text-align: center;
+}
+.my_tree ul::after {
+  background: #ececec none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 50%;
+  margin-left: -1px;
+  margin-top: -20px;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
+.my_tree > li::after, .my_tree > li::before {
+  display: none !important;
+}
+ul.my_tree li, ul.my_tree ul {
+    display: table-cell;
+    position: relative;
+    top: 20px;
+    padding: 0px 5px;
+}
+ul.my_tree li::after {
+  background: #ececec none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: -2px;
+  width: 100%;
+}
+ul.my_tree li::before {
+  background: #ececec none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 40px;
+  margin: -2px auto;
+  width: 2px;
+}
+ul.my_tree li:first-child::after, ul.my_tree li:last-child::after {
+  display: none;
+}
+ul.my_tree li:first-child::after {
+  background: #ececec none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 50%;
+}
+ul.my_tree li:last-child::after {
+  background: #ececec none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: -2px;
+  width: 50%;
+}
+/*li:first-child::after {
+  background: #ffffff none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: -1px;
+  top: -2px;
+  width: 50%;
+}
+li:last-child::after {
+  background: #ffffff none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  right: -1px;
+  top: -2px;
+  width: 50%;
+}*/
+ul.my_tree li span {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+    color: #9f9f9f;
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    width: 250px;
+    margin: 0 auto;
+    min-height: 100px;
+}
+.img_hldr {
+    border-radius: 100%;
+    height: 60px;
+    margin: 5px auto;
+    overflow: hidden;
+    width: 60px;
+    flex-basis: 60px;
+}
+.img_hldr > img {
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+}
+ul.my_tree li span h4 {
+    color: #000;
+    text-align: left;
+    flex: 1;
+    padding-left: 10px;
+    font-size: 14px;
+}
+ul.my_tree li span small {
+  display: inline-block;
+  margin-top: 5px;
+}
